@@ -16,7 +16,7 @@
 @secondaryFontFamily: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 @preFontFamily: "Consolas", Courier, monospace;
 @tableFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-@linkColor: #3498db;
+@linkColor: #2dc96f;
 @linkColorHover: darken(@linkColor, 50%);
 @borderColor: #ecf0f1;
 @subtleColor: rgba(0,0,0,0.05);
@@ -117,6 +117,36 @@ h1 {
         max-width: 100%
     }
 
+.panel-cover {
+    background: url("http://daleanthony.com/assets/images/background-cover.jpg") no-repeat scroll left top / cover  #666666;
+    height: 100%!important;
+    margin: 0 auto!important;;
+    max-height: 100%!important;
+    max-width: 100%!important;
+    padding: 0;
+    width: 100%!important;
+}
+
+.panel-main {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.panel-main-cell {
+    display: table-cell;
+    padding: 0 60px;
+    position: relative;
+    vertical-align: middle;
+    z-index: 800;
+}
+
+.panel-main-cell-content {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+
 article.preview {
     margin-bottom: 4em;
     p.readmore {
@@ -132,12 +162,14 @@ article.preview {
 #blog-logo {
     display: block;
     max-width: 100px;
-    margin: 50px auto 0;
+    margin: 0 auto 0;
+    // padding-top:50px;
     text-align: center;
     div.bloglogo {
       width: 100px;
       height: 100px;
       border-radius: 50%;
+      border: 2px solid #fff;
       background-size: cover !important;
       background-position: center center !important;
       background-color: @bodyBackgroundColor;
@@ -159,7 +191,7 @@ h1.blog-title {
 h2.blog-description {
     border-bottom: 1px solid @borderColor;
     border-top: 1px solid @borderColor;
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
     padding: .5em 1em;
     line-height: 1.2em;
 }
@@ -538,7 +570,7 @@ a.archive-link {
 /* Comments */
 
 #disqus_thread {
-    color: #787878; 
+    color: #787878;
 }
 
 /* Tables */
@@ -569,7 +601,7 @@ table {
 
 /* === Media Queries === */
 
-@media only screen and (min-width: 320px) and (max-width: 500px) { 
+@media only screen and (min-width: 320px) and (max-width: 500px) {
     footer section span.copyright {
         display: block
     }
